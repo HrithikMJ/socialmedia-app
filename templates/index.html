@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles/style.css">
+    <title>Social Media</title>
+  </head>
+  <body>
+    
+      <div class="content">
+          <h1 id="title">
+              Social Media
+          </h1>
+      <div class="form">
+        <form action="/" method="post" id="chatForm">
+          <input
+            placeholder="Username"
+            name="username"
+            required
+            id="username"
+          />
+          <br>
+          
+          <input placeholder="Enter Chat" name="chat" required id="chat" />
+          <br>
+          <br>
+          <br>
+          <button type="submit" id="submit" title="send"><span class="material-icons">
+            send
+            </span></button>
+        </form>
+        <form method="GET">
+            <button type="submit" id="clear" title="clear chat"><span class="material-icons">
+                clear
+                </span>
+                </button>
+          </form>
+        </div>
+            <br>
+        <div class="messages" id="messages">
+          {% for i in messages %}
+          <div class="chatMessage">
+            <div id="name">{{i[0]}} :&nbsp;<em>{{i[1]}}</em>
+           </div></div>
+        <br>
+        {% endfor %}
+          </div>
+          
+        </div>
+     
+  
+   
+  </body>
+</html>
